@@ -23,7 +23,7 @@ def draw_dot(root, format='svg', rankdir='LR'):
     dot = Digraph(format=format, graph_attr={'rankdir': rankdir}) #, node_attr={'rankdir': 'TB'})
 
     for n in nodes:
-        dot.node(name=str(id(n)), label = "{ %s %.4f | grad %.2f}" % (n._label, n.val, n.grad), shape='record')
+        dot.node(name=str(id(n)), label = "{ %s %.4f | grad %.5f}" % (n._label, n.val, n.grad), shape='record')
         if n._op:
             dot.node(name=str(id(n)) + n._op, label=n._op)
             dot.edge(str(id(n)) + n._op, str(id(n)))
