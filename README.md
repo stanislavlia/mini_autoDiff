@@ -18,9 +18,7 @@ Here's how you can use this toy engine:
 
 ```python
 import math
-
-class Value:
-    # ... [Your Value class implementation here]
+from toygrad import Value
 
 # Define your variables
 x = Value(2)
