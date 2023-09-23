@@ -3,7 +3,7 @@
 ### Acknowledgement
 This project is inspired by Andrej Karpathy's micrograd repository and tutorial.
 
-link to his video: https://www.youtube.com/watch?v=PaCmpygFfXo&t=105s
+link to his video: https://www.youtube.com/watch?v=VMj-3S1tku0
 
 ### Description
 This is a toy (but working) auto-gradient engine which is able to build a computational graph of a mathematical expression and executes back-propagation along this graph in the correct order. It uses topological sorting of the computational graph in order to figure out how to run back-propagation correctly.
