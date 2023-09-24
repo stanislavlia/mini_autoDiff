@@ -86,6 +86,28 @@ class Value:
         
         return out
     
+    def relu(self):
+        val = max(self.val, 0)
+        out = Value(val, _parents=(self,) , _op='relu')
+
+        def _backward():
+            self.grad += int(out.val > 0) * out.grad
+        
+        out._backward =_backward
+
+        return out
+    
+    def sigmoid(self):
+        val = 1 / ( 1 + math.exp(-self.val))
+        out = Value(val, _parents = (self, ), _op="sigmoid")
+
+        def _backward():
+            self.grad += ((1 - out.val) * out.val ) * out.grad
+
+        out._backward = _backward
+
+        return out
+
     
     def __pow__(self, another_value):
         assert isinstance(another_value, (int, float)), "only int or float expected"
