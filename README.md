@@ -38,6 +38,10 @@ print(f"gradient of y wrt to F is {y.grad}")  # dF/dy = 1.506
 # Draw the computation graph (if you have implemented the draw_dot function)
 draw_dot(step3)
 ```
+## Training small Neural Network using this engine
+You can actually see the process of training a NN for binary classification
+in [this notebook](usage_example.ipynb).
+
 ## Plans
 - add more functions such as log, sin, cos, max, min
 - add more activation functions such as relu, sigmoid
