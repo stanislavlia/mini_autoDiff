@@ -1,4 +1,5 @@
-# toygrad
+# mini autoDiff
+mini Automated Differentiation engine 
 
 ### Acknowledgement
 This project is inspired by Andrej Karpathy's micrograd repository and tutorial.
